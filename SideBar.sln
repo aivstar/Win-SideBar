@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideBar", "SideBar.csproj", "{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Debug|x86.Build.0 = Debug|Any CPU
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Release|x86.ActiveCfg = Release|Any CPU
+		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43586650-226C-4A83-8CCC-921C232315C0}
+	EndGlobalSection
+EndGlobal
