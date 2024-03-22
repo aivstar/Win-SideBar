@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace SideBar
 {
-    public partial class UPForm : Form
+    public partial class TopForm : Form
     {
         funtion n_funtion = new funtion();
         string type = "up";
-        public UPForm()
+        public TopForm()
         {
             InitializeComponent();
         }
@@ -154,7 +154,7 @@ namespace SideBar
             ContextMenuStrip RightItem = new ContextMenuStrip();
 
             ToolStripMenuItem tool_del = new ToolStripMenuItem();
-            tool_del.Text = Properties.Resources.t_del;
+            tool_del.Text = SideBar.Resources.strings.t_del;
             tool_del.Click += delegate
             {
                 Tool_del_Click();

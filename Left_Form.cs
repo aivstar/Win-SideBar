@@ -151,7 +151,7 @@ namespace SideBar
             ContextMenuStrip RightItem = new ContextMenuStrip();
 
             ToolStripMenuItem tool_del = new ToolStripMenuItem();
-            tool_del.Text = Properties.Resources.t_del;
+            tool_del.Text = SideBar.Resources.strings.t_del;
             tool_del.Click += delegate
             {
                 Tool_del_Click();
