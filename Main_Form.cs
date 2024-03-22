@@ -23,7 +23,7 @@ namespace SideBar
 
             if (Properties.Settings.Default.up_check)
             {
-                tool_UP_Menu.Checked = true;
+                tool_top_Menu.Checked = true;
                 tool_UP_Menu_Click(sender, e);
             }
             if (Properties.Settings.Default.left_check)
@@ -40,7 +40,7 @@ namespace SideBar
         }
         public static void ThreadProcUp()
         {
-            UPForm form = new UPForm();
+            TopForm form = new TopForm();
             form.ShowDialog();
         }
         public static void ThreadProcLeft()
@@ -95,7 +95,7 @@ namespace SideBar
 
         private void tool_UP_Menu_Click(object sender, EventArgs e)
         {
-            if (tool_UP_Menu.Checked)
+            if (tool_top_Menu.Checked)
             {
                 Properties.Settings.Default.up_check = true;
 

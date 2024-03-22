@@ -30,7 +30,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ProductName>Aivstar SideBar</ProductName>
+    <ProductName>Win SideBar</ProductName>
     <PublisherName>Aivstar</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.0</ApplicationVersion>
@@ -76,6 +76,7 @@
   <PropertyGroup>
     <SignManifests>false</SignManifests>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
@@ -129,6 +130,16 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="funtion.cs" />
+    <Compile Include="Resources\strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\strings.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strings.zh-CN.resx</DependentUpon>
+    </Compile>
     <Compile Include="Right_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,11 +147,11 @@
       <DependentUpon>Right_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="UP_Form.cs">
+    <Compile Include="Top_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UP_Form.Designer.cs">
-      <DependentUpon>UP_Form.cs</DependentUpon>
+    <Compile Include="Top_Form.Designer.cs">
+      <DependentUpon>Top_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_Form.cs">
       <SubType>Form</SubType>
@@ -159,11 +170,19 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\strings.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.zh-CN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Right_Form.resx">
       <DependentUpon>Right_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UP_Form.resx">
-      <DependentUpon>UP_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Top_Form.resx">
+      <DependentUpon>Top_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Form.resx">
       <DependentUpon>Main_Form.cs</DependentUpon>

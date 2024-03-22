@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SideBar.Properties {
+namespace SideBar.Resources {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace SideBar.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal strings() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SideBar.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SideBar.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SideBar.Resources.strings", typeof(strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,12 +61,74 @@ namespace SideBar.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   查找类似 About 的本地化字符串。
         /// </summary>
-        internal static System.Drawing.Bitmap LogoBanner {
+        internal static string t_about {
             get {
-                object obj = ResourceManager.GetObject("LogoBanner", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("t_about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Check for Update 的本地化字符串。
+        /// </summary>
+        internal static string t_c_up {
+            get {
+                return ResourceManager.GetString("t_c_up", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Delete 的本地化字符串。
+        /// </summary>
+        internal static string t_del {
+            get {
+                return ResourceManager.GetString("t_del", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Exit 的本地化字符串。
+        /// </summary>
+        internal static string t_exit {
+            get {
+                return ResourceManager.GetString("t_exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Left Menu 的本地化字符串。
+        /// </summary>
+        internal static string t_l_menu {
+            get {
+                return ResourceManager.GetString("t_l_menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Right Menu 的本地化字符串。
+        /// </summary>
+        internal static string t_r_menu {
+            get {
+                return ResourceManager.GetString("t_r_menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Setting 的本地化字符串。
+        /// </summary>
+        internal static string t_set {
+            get {
+                return ResourceManager.GetString("t_set", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Top Menu 的本地化字符串。
+        /// </summary>
+        internal static string t_t_menu {
+            get {
+                return ResourceManager.GetString("t_t_menu", resourceCulture);
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace SideBar
 {
-    partial class UPForm
+    partial class TopForm
     {
         /// <summary>
         /// 必需的设计器变量。
