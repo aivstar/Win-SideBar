@@ -136,6 +136,9 @@ namespace SideBar
 
         private void Create_btn(string name, string link, int con_num, string id)
         {
+            Point location = new Point();
+            Point old_l = new Point();
+            String old_name = "";
             Image img = System.Drawing.Icon.ExtractAssociatedIcon(link).ToBitmap();
 
             Button button = new Button();
@@ -159,17 +162,45 @@ namespace SideBar
             RightItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tool_del });
             button.ContextMenuStrip = RightItem;
 
-            button.Click += delegate { Button_Click(); };
             button.MouseHover += delegate { Button_MouseHover(); };
             button.MouseLeave += delegate { Button_MouseLeave(); };
+            button.MouseDown += delegate (object sender, MouseEventArgs e) { Button_MouseDown(e); };
+            button.MouseMove += delegate (object sender, MouseEventArgs e) { Button_MouseMove(sender, e); };
+            button.MouseUp += delegate (object sender, MouseEventArgs e) { Button_MouseUp(e); };
             this.Controls.Add(button);
 
-
-
-            void Button_Click()
+            void Button_MouseUp(MouseEventArgs e)
             {
-                System.Diagnostics.Process.Start(link);
+
+                if (button.Location == old_l && e.Button == MouseButtons.Left)
+                { System.Diagnostics.Process.Start(link); }
+                else if (button.Location.Y < Height)
+                {
+                    int btn_id = Convert.ToInt32((button.Location.Y - 5) / 58);
+
+                    n_funtion.move_Shortcut(type, old_name, btn_id);
+                    update_btn();
+                }
+
+
             }
+            void Button_MouseDown(MouseEventArgs e)
+            {
+                old_l = button.Location;
+                location = e.Location;
+                old_name = GetChildAtPoint(old_l).Name;
+            }
+            void Button_MouseMove(object sender, MouseEventArgs e)
+            {
+
+                if (e.Button == MouseButtons.Left)
+                {
+                    Button b = sender as Button;
+                    b.Location = new Point(b.Location.X + (e.X - location.X), b.Location.Y + (e.Y - location.Y));
+                }
+            }
+
+
             void Button_MouseHover()
             {
                 button.Location = new Point(0, l_point - 2);

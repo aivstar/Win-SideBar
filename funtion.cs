@@ -124,6 +124,27 @@ namespace SideBar
             doc.Save(list_path(true));
         }
 
+        public void move_Shortcut(string side, string id,int btn_id)
+        {
+            XmlDocument doc = load_xml();
+            XmlNodeList nodes = doc.SelectSingleNode(@"menu/" + side).ChildNodes;
+            foreach (XmlNode theNode in nodes)
+            {
+                XmlElement theEl = (XmlElement)theNode;
+                if (theEl.GetAttribute("ID") == id)
+                {
+                    if (btn_id != 0)
+                    {
+                        btn_id += 1;
+                    }
+                    doc.SelectSingleNode(@"menu/" + side).InsertBefore(theEl, nodes.Item(btn_id));
+                }
+            }
+            doc.Save(list_path(true));
+
+
+        }
+
         public void del_Shortcut(string side, string id)
         {
             XmlDocument doc = load_xml();

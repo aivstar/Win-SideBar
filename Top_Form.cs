@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace SideBar
@@ -16,14 +17,16 @@ namespace SideBar
         }
         new bool Hide = false;       //用来表示当前隐藏状态，例如Hide=false就是 不在隐藏状态
 
-        private void UP_Form_Load(object sender, EventArgs e)
+        private void Top_Form_Load(object sender, EventArgs e)
         {
             this.Opacity = 0.5;
             this.Top = -this.Height + 3;    //隐藏窗口，窗口高度加3取反(为负数)
             Hide = true;
-            UP_timer.Interval = 1;//1毫秒
-            UP_timer.Start();     //启动定时器2 
+            Top_timer.Interval = 1;//1毫秒
+            Top_timer.Start();     //启动定时器2 
             update_btn();   //刷新辅助任务栏按钮
+
+       
         }
 
 
@@ -42,7 +45,7 @@ namespace SideBar
                 }
             }
         }
-        private void UP_Tick(object sender, EventArgs e)
+        private void Top_Tick(object sender, EventArgs e)
         {
             //this.TopMost = false;        //窗体不显示在所有软件最前面
             Point pt = new Point(Form.MousePosition.X, Form.MousePosition.Y);//获得当前鼠标位置 
@@ -79,18 +82,19 @@ namespace SideBar
             }
         }
 
-        private void UP_Form_DragEnter(object sender, DragEventArgs e)                                         //获得“信息”
+        private void Top_Form_DragEnter(object sender, DragEventArgs e)                                         //获得“信息”
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Link;                                                              //拖动时的鼠标效果
             else
                 e.Effect = DragDropEffects.None;
         }
-        private void UP_Form_DragDrop(object sender, DragEventArgs e)                                          //解析信息
+        private void Top_Form_DragDrop(object sender, DragEventArgs e)                                          //解析信息
         {
 
             string tname = "";
             int con_num = this.Controls.Count;
+    
             if (con_num < 12)
             {
 
@@ -137,6 +141,7 @@ namespace SideBar
         {
             Point location = new Point();
             Point old_l = new Point();
+            String old_name = "";
             Image img = System.Drawing.Icon.ExtractAssociatedIcon(link).ToBitmap();
 
             Button button = new Button();
@@ -173,10 +178,18 @@ namespace SideBar
 
             void Button_MouseUp(MouseEventArgs e)
             {
-
+            
                 if (button.Location == old_l && e.Button == MouseButtons.Left)
                 { System.Diagnostics.Process.Start(link); }
+                else if(button.Location.Y < Height) 
+                {
+                    int btn_id = Convert.ToInt32((button.Location.X - 5)/58);
+                   
+                    n_funtion.move_Shortcut(type, old_name, btn_id);
+                   update_btn();
+                }
 
+               
             }
             void Button_MouseHover()
             {
@@ -200,7 +213,7 @@ namespace SideBar
             {
                 old_l = button.Location;
                 location = e.Location;
-
+                old_name = GetChildAtPoint(old_l).Name;
             }
             void Button_MouseMove(object sender, MouseEventArgs e)
             {

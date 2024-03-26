@@ -145,5 +145,11 @@ namespace SideBar
             AboutBox aboutbox = new AboutBox();
             aboutbox.Show();
         }
+
+        private void tool_setting_Click(object sender, EventArgs e)
+        {
+            Configuration configuration = new Configuration();
+            configuration.Show();
+        }
     }
 }

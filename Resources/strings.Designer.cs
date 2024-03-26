@@ -79,6 +79,15 @@ namespace SideBar.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Configuration 的本地化字符串。
+        /// </summary>
+        internal static string t_conf {
+            get {
+                return ResourceManager.GetString("t_conf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Delete 的本地化字符串。
         /// </summary>
         internal static string t_del {

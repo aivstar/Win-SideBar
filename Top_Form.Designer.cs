@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.UP_timer = new System.Windows.Forms.Timer(this.components);
+            this.Top_timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // UP_timer
             // 
-            this.UP_timer.Tick += new System.EventHandler(this.UP_Tick);
+            this.Top_timer.Tick += new System.EventHandler(this.Top_Tick);
             // 
             // UP_Form
             // 
@@ -53,9 +53,9 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UP Form";
-            this.Load += new System.EventHandler(this.UP_Form_Load);
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.UP_Form_DragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.UP_Form_DragEnter);
+            this.Load += new System.EventHandler(this.Top_Form_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.Top_Form_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Top_Form_DragEnter);
             this.ResumeLayout(false);
 
         }
@@ -64,7 +64,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer UP_timer;
+        private System.Windows.Forms.Timer Top_timer;
     }
 }
 

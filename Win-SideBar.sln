@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29920.165
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SideBar", "SideBar.csproj", "{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Aivstar Win Sidebar Setup", "..\Aivstar Win Sidebar Setup\Aivstar Win Sidebar Setup.vdproj", "{93542D87-08E4-4A1F-B576-23E77CBE2ABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Release|x86.ActiveCfg = Release|Any CPU
 		{DB9FD7A4-E7E0-4E25-90AC-8AD4B6D08B15}.Release|x86.Build.0 = Release|Any CPU
+		{93542D87-08E4-4A1F-B576-23E77CBE2ABC}.Debug|Any CPU.ActiveCfg = Debug
+		{93542D87-08E4-4A1F-B576-23E77CBE2ABC}.Debug|x86.ActiveCfg = Debug
+		{93542D87-08E4-4A1F-B576-23E77CBE2ABC}.Release|Any CPU.ActiveCfg = Release
+		{93542D87-08E4-4A1F-B576-23E77CBE2ABC}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

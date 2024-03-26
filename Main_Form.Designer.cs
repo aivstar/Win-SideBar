@@ -102,6 +102,7 @@
             this.tool_setting.Name = "tool_setting";
             this.tool_setting.Size = new System.Drawing.Size(180, 22);
             this.tool_setting.Text = global::SideBar.Resources.strings.t_set;
+            this.tool_setting.Click += new System.EventHandler(this.tool_setting_Click);
             // 
             // toolStripSeparator2
             // 
