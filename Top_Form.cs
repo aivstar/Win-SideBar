@@ -10,7 +10,7 @@ namespace SideBar
     public partial class TopForm : Form
     {
         funtion n_funtion = new funtion();
-        string type = "up";
+        string type = "top";
         public TopForm()
         {
             InitializeComponent();
