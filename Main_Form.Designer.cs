@@ -74,7 +74,7 @@
             this.tool_top_Menu.Name = "tool_top_Menu";
             this.tool_top_Menu.Size = new System.Drawing.Size(180, 22);
             this.tool_top_Menu.Text = global::SideBar.Resources.strings.t_t_menu;
-            this.tool_top_Menu.Click += new System.EventHandler(this.tool_UP_Menu_Click);
+            this.tool_top_Menu.Click += new System.EventHandler(this.tool_Top_Menu_Click);
             // 
             // tool_Left_Menu
             // 

@@ -21,10 +21,10 @@ namespace SideBar
             n_funtion.Create_list();
             n_funtion.SetAutoRun(Application.ProductName, Application.ExecutablePath, true);
 
-            if (Properties.Settings.Default.up_check)
+            if (Properties.Settings.Default.top_check)
             {
                 tool_top_Menu.Checked = true;
-                tool_UP_Menu_Click(sender, e);
+                tool_Top_Menu_Click(sender, e);
             }
             if (Properties.Settings.Default.left_check)
             {
@@ -93,11 +93,11 @@ namespace SideBar
             Properties.Settings.Default.Save();
         }
 
-        private void tool_UP_Menu_Click(object sender, EventArgs e)
+        private void tool_Top_Menu_Click(object sender, EventArgs e)
         {
             if (tool_top_Menu.Checked)
             {
-                Properties.Settings.Default.up_check = true;
+                Properties.Settings.Default.top_check = true;
 
                 Thread t_up = new Thread(new ThreadStart(ThreadProcUp));
                 up_threadList.Add(t_up);
@@ -106,7 +106,7 @@ namespace SideBar
             }
             else
             {
-                Properties.Settings.Default.up_check = false;
+                Properties.Settings.Default.top_check = false;
                 foreach (var t_up in up_threadList)
                 {
                     t_up.Abort();
